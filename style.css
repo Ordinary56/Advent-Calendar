@@ -1,0 +1,56 @@
+body {
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+    background-image: url("./bg.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    height: 98vh;
+    gap: 10px;
+    min-width: 95vw;
+    margin: auto;
+    color: #fff;
+}
+
+.cell {
+    border: 1px solid black;
+    border-radius: 25px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 25%;
+    background-color: #342513;
+    box-shadow: -5px 5px 20px #2B2B2B ;
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.inactive {
+    background-color: brown;
+}
+
+
+
+
+
+@media screen and (max-width: 768px) {
+    .container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(8, 1fr);
+        width: 100vw;
+    }
+
+    .cell {
+        width: 80%;
+        justify-self: center;
+    }
+}
